@@ -1,0 +1,63 @@
+.shopList {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  width: 100%;
+  gap: 10px;
+}
+.filterShopList > button {
+  width: 300px;
+}
+.shopList-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+.filter-div button {
+  cursor: pointer;
+  width: 100%;
+  padding: 5px 15px;
+}
+.shopList input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.shopList label {
+  font-size: 20px;
+}
+
+.shopList-element {
+  display: flex;
+  background-color: rgb(240, 240, 240);
+  /* border: 1px solid red; */
+  padding: 10px;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+.deleteIcon {
+  cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+  .filterShopList > button {
+    width: 130px;
+  }
+}
+@media screen and (max-width:450px) {
+  .shopList label {
+    font-size: 18px;
+  }
+}

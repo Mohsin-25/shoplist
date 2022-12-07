@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ShopFormNew from "./Components/ShopFormNew";
+import ShopList from "./Components/ShopList";
+import AddIcon from "@mui/icons-material/Add";
+import { useState } from "react";
 
 function App() {
+  const [showForm, setShowForm] = useState(false);
+  const [blur, setBlur] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="heading">Shop List</h1>
+      <div className="container">
+        <AddIcon
+          sx={{ fontSize: 35 }}
+          onClick={() => {
+            setShowForm(!showForm);
+            setBlur(!blur);
+          }}
+          className="formBtn"
+        ></AddIcon>
+        {showForm && (
+          <ShopFormNew
+            showForm={showForm}
+            setShowForm={setShowForm}
+            blur={blur}
+            setBlur={setBlur}
+          ></ShopFormNew>
+        )}
+        <ShopList></ShopList>
+      </div>
+      {blur && <div className="blur"></div>}
     </div>
   );
 }
