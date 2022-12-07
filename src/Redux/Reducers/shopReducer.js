@@ -6,8 +6,8 @@ const initialState = {
       name: "Royal kirana",
       area: "Mumbai",
       category: "Grocery",
-      openingDate: "2022-12-06",
-      closingDate: "2022-12-07",
+      openingDate: "2022-12-01",
+      closingDate: "2022-12-03",
     },
     {
       id: new Date().getTime() + 7,
@@ -33,8 +33,8 @@ const initialState = {
       name: "Anup Medicals",
       area: "Nagpur",
       category: "Chemist",
-      openingDate: "2022-12-06",
-      closingDate: "2022-12-07",
+      openingDate: "2022-12-01",
+      closingDate: "2022-12-06",
     },
     {
       id: new Date().getTime() + 4,
@@ -51,8 +51,8 @@ const initialState = {
       name: "Zee mart",
       area: "Pune",
       category: "Grocery",
-      openingDate: "2022-12-06",
-      closingDate: "2022-12-07",
+      openingDate: "2022-11-28",
+      closingDate: "2022-12-06",
     },
 
     {
@@ -70,8 +70,8 @@ const initialState = {
       name: "Khan Medicals",
       area: "Mumbai",
       category: "Chemist",
-      openingDate: "2022-12-06",
-      closingDate: "2022-12-07",
+      openingDate: "2022-11-27",
+      closingDate: "2022-12-05",
     },
   ],
 };

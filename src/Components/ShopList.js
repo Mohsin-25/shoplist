@@ -42,6 +42,7 @@ export default function ShopList() {
     });
     setItems(updatedItem);
   };
+
   const filterCategory = (categoryItem) => {
     // console.log(categoryItem);
     const updatedItem = list.filter((currElem) => {
@@ -50,6 +51,11 @@ export default function ShopList() {
     });
     setItems(updatedItem);
   };
+
+  const today = Number(
+    new Date().toISOString().replace(/T.*/, "").replaceAll(/-/gi, "")
+  );
+  console.log(today);
 
   return (
     <div className="shopList">
@@ -64,9 +70,14 @@ export default function ShopList() {
                     <small>{element.area}</small>
                   </small>
                 </h4>
-                <small>
-                  <p>({element.category})</p>
-                </small>
+                <small></small>
+                <p>({element.category})</p>
+                {Number(element.openingDate.replaceAll(/-/gi, "")) <= today &&
+                today <= Number(element.closingDate.replaceAll(/-/gi, "")) ? (
+                  <p>(OPEN)</p>
+                ) : (
+                  <p>(CLOSED)</p>
+                )}
                 <DeleteIcon
                   className="deleteIcon"
                   onClick={() => dispatch(removeShop(element.id))}
